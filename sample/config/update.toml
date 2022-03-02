@@ -1,0 +1,11 @@
+title = "配置更新"
+route = "/api/config/update"
+
+[request]
+id         = ["int", "配置ID"]
+name       = ["string", "名称"]
+k          = ["string", "键"]
+v          = ["string", "值"]
+data_type  = ["string", "数据类型"]
+
+[response]

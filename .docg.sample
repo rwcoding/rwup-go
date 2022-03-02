@@ -1,0 +1,6 @@
+username =
+password =
+project  =
+root     = ./sample
+url      = http://localhost:8000
+parse    = md,toml

@@ -1,0 +1,11 @@
+title = "登录接口"
+route = "/api/open/login"
+
+[request]
+username = ["string", "账号"]
+password = ["string", "密码"]
+platform = ["int", "平台", "max=99"]
+
+[response]
+token = ["string", "用户TOKEN"]
+key   = ["string", "签名KEy"]

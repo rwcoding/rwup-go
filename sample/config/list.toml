@@ -1,0 +1,24 @@
+title = "配置列表"
+route = "/api/config/list"
+
+[request]
+page      = ["int", "页码"]
+page_size = ["int", "每页数"]
+key       = ["string", "搜索关键词"]
+
+[response]
+datas   = ["array[item]", "数据"]
+count   = ["int", "总数"]
+types   = ["array[type]", "类型标识"]
+
+[component.item]
+id         = ["int", "配置ID"]
+name       = ["string", "名称"]
+k          = ["string", "键"]
+v          = ["string", "值"]
+data_type  = ["string", "数据类型"]
+created_at = ["string", "创建时间"]
+
+[component.type]
+k          = ["string", "键"]
+v          = ["string", "值"]
