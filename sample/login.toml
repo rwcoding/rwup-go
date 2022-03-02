@@ -2,10 +2,10 @@ title = "登录接口"
 route = "/api/open/login"
 
 [request]
-username = ["string", "账号"]
-password = ["string", "密码"]
-platform = ["int", "平台", "max=99"]
+username = ["string", "账号", "order=1"]
+password = ["string", "密码", "order=2"]
+platform = ["int", "平台",     "max=20|min=10|order=3"]
 
 [response]
-token = ["string", "用户TOKEN"]
-key   = ["string", "签名KEy"]
+token = ["string", "用户TOKEN", "order=1"]
+key   = ["string", "签名KEy", "order=2"]

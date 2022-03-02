@@ -4,6 +4,7 @@ import (
 	"errors"
 	"io/ioutil"
 	"path/filepath"
+	"sort"
 	"strconv"
 	"strings"
 )
@@ -216,8 +217,8 @@ func parseProperty(data map[string][]string, dsl *Dsl) ([]Property, error) {
 		//if min == "" && max != "" {
 		//	property.Desc = property.Desc + "，最大：" + max
 		//}
-
 		properties = append(properties, property)
 	}
+	sort.Sort(PropertySort(properties))
 	return properties, nil
 }
